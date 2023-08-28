@@ -282,8 +282,14 @@ Project settings:
         Healthcheck : /login
         Healthcheck grace period: 30s
    ```
-   
+   Verify and create. 
+   During creation, modify the target group healthcheck under advanced options and overide healthchecks to 8080. 
+   ![](healthcheck overide)
+
+   ![](task creation success)
+
 6. Pipeline for ECS
+Verify the running container, cluster -> service -> tasks -> networking
 7. Promote to Prod
 8. Backup Stack
 
