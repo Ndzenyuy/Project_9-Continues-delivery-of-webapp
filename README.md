@@ -5,14 +5,14 @@ In project 5, I deployed a Continues Integration pipeline using Jenkins. The pip
 ![](cd-jenkins-architecture)
 
 ## Steps
-1. Branches and Webhook
+1. Branches and Webhook\
 Create a new branch from ci-jenkins by running this git command within the project folder
 ```
 git checkout -b cicd-jenkins
 ```
 For webhooks, login to the project repository in Github and goto settings -> Webhooks -> Edit webhooks, then enter the public IP of the Jenkins EC instance -> save and test connection
 
-2. AWS IAM and ECR
+2. AWS IAM and ECR\
 Create an AWS IAM user
 ```
 Name: cicd-jenkins
@@ -24,7 +24,7 @@ Programatic access = true(download CSV file)
 In ECR, create a private repository
 ```Name: vprofileappimg```
 
-3. Jenkins configurations
+3. Jenkins configurations\
 
 Open Jenkins webpage, and install the following plugins
 ``` - Docker pipeline
