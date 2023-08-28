@@ -24,7 +24,7 @@ Programatic access = true(download CSV file)
 In ECR, create a private repository
 ```Name: vprofileappimg```
 
-3. Jenkins configurations\
+3. Jenkins configurations
 
 Open Jenkins webpage, and install the following plugins
 ```
