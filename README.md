@@ -290,6 +290,8 @@ Project settings:
 
 6. Pipeline for ECS
 Verify the running container, cluster -> service -> tasks -> networking
+Access the running container page to see the containerized deployed wepp
+
 7. Promote to Prod
 8. Backup Stack
 
