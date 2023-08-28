@@ -2,7 +2,7 @@
 In project 5, I deployed a Continues Integration pipeline using Jenkins. The pipeline deployed an app that is written in Java, built and stored the artifacts on Nexus Server, Containerized the app and stored it in ECR. This project was the continuation, taking the image from ECR and deploying to ECS, Tested the project in staging and promotted it to Production. 
 
 ## Architecture
-![](cd-jenkins-architecture)
+![](https://github.com/Ndzenyuy/Project_9-Continues-delivery-of-webapp/blob/cicd-jenkins/images/project%209%20architecture.jpg)
 
 ## Steps
 1. Branches and Webhook\
@@ -27,7 +27,8 @@ In ECR, create a private repository
 3. Jenkins configurations\
 
 Open Jenkins webpage, and install the following plugins
-``` - Docker pipeline
+```
+    - Docker pipeline
     - CloudBees Docker Build and Publish
     - Amazon ECR
     - Pipeline: AWS Steps
@@ -59,7 +60,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 Verify if the pipeline for project 5 is working, necessary for the next steps
-![](continues integration pipeline)
+
 
 4. Docker Build in Pipeline
 Open VSCode, open Dockerfile, under the multistage/app folder, should contain the following code: 
@@ -245,8 +246,8 @@ Project settings:
 ```
 
 --> save and build now
-![](jenkins-build-cicd-success)
-![](vprofileappimg)
+![](https://github.com/Ndzenyuy/Project_9-Continues-delivery-of-webapp/blob/cicd-jenkins/images/jenkinsbuild-cicd-sucess.png)
+![](https://github.com/Ndzenyuy/Project_9-Continues-delivery-of-webapp/blob/cicd-jenkins/images/vcr-build-images.png)
 
 5. AWS ECS Setup
  - Create a cluster:
@@ -284,9 +285,9 @@ Project settings:
    ```
    Verify and create.\ 
    During creation, modify the target group healthcheck under advanced options and overide healthchecks to 8080. 
-   ![](healthcheck overide)
+   ![](https://github.com/Ndzenyuy/Project_9-Continues-delivery-of-webapp/blob/cicd-jenkins/images/target-group-override.png)
 
-   ![](task creation success)
+   ![](https://github.com/Ndzenyuy/Project_9-Continues-delivery-of-webapp/blob/cicd-jenkins/images/task%20creation%20success.png)
 
 6. Pipeline for ECS
 Now onto Jenkinsfile, the deploy stage needs to be updated in order for it to deploy automatically when ever a new image is uploaded. Here the cluster name and the service names are needed.\
@@ -436,7 +437,7 @@ pipeline {
 ```
 
 When uploaded, Jenkins will run a build(GitHub Webhooks), 
-![](successful build jenkins)
+![](https://github.com/Ndzenyuy/Project_9-Continues-delivery-of-webapp/blob/cicd-jenkins/images/vpro%20running%20staging%20task.png)
 
 Now the Pipeline is up and running, each time code is uploaded to Github, the pipeline is automatically Triggered
 
