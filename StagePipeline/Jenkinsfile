@@ -21,10 +21,9 @@ pipeline {
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonar-pro'
         SONARSCANNER = 'sonarscanner'
-        registryCredential = 'ecr:us-east-1:awscreds'
-        appRegistry = '997450571655.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg'    
-        vprofileRegistry = "https://997450571655.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg"
-        cluster = "vprostaging"
+        registryCredential = 'ecr:us-east-2:awscreds'
+        appRegistry = '997450571655.dkr.ecr.us-east-2.amazonaws.com/vprofileappimg'    
+        vprofileRegistry = "997450571655.dkr.ecr.us-east-2.amazonaws.com/vprofileappimg"
         service = "vproappstagesvc"
     }
 
