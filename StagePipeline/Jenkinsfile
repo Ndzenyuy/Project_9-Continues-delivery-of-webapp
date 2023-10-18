@@ -25,6 +25,7 @@ pipeline {
         appRegistry = '997450571655.dkr.ecr.us-east-2.amazonaws.com/vprofileappimg'    
         vprofileRegistry = "https://997450571655.dkr.ecr.us-east-2.amazonaws.com"
         service = "vproappstagesvc"
+        cluster = "vproappcluster"
     }
 
     stages {
@@ -133,7 +134,7 @@ pipeline {
         always {
             echo 'Slack Notifications'
             slackSend channel: '#jenkinscicd',
-                colo: COLOR_MAP[currentBuild.currentResult],
+                color: COLOR_MAP[currentBuild.currentResult],
                 message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}"
         }
     }*/
